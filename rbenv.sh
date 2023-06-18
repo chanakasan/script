@@ -22,10 +22,11 @@ check_dir_exists() {
 main() {
     local rbenv=$HOME/.rbenv
     local bashrc=$HOME/.bashrc
+
     echo "=> Installing rbenv ..."
     check_dir_exists
     git clone https://github.com/rbenv/rbenv.git $rbenv
-    #cd $rbenv && src/configure && make -C src
+    cd $rbenv && src/configure && make -C src
     $rbenv/bin/rbenv init
     . $bashrc
     remove_from_bashrc

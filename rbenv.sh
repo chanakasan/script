@@ -31,8 +31,8 @@ main() {
     remove_from_bashrc
     copy_to_bashrc
     echo "=> Installing ruby-build ..."
-    mkdir -p "$(rbenv root)"/plugins
-    git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+    mkdir -p $rbenv/plugins
+    git clone https://github.com/rbenv/ruby-build.git $rbenv/plugins/ruby-build
     echo ""
     echo "=> Done"
 }
